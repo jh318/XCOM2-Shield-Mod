@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Default" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Guid>e2b9fc3b-1ef2-4af4-8a69-a2814eee38c7</Guid>
+    <Name>Shield</Name>
+    <Description>Adds Shields as a primary weapon to XCOM soldiers.</Description>
+    <SteamPublishID>0</SteamPublishID>
+    <AssemblyName>Shield</AssemblyName>
+    <RootNamespace>Shield</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Config\" />
+    <Folder Include="Content\" />
+    <Folder Include="Localization\" />
+    <Folder Include="Src\" />
+    <Folder Include="Src\Shield" />
+    <Folder Include="Src\Shield\Classes" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\XComClassData.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Config\XComShield.ini">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Content\ConvShield.upk">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ReadMe.txt" />
+    <Content Include="ModPreview.jpg" />
+    <Content Include="Config\XComEditor.ini" />
+    <Content Include="Config\XComEngine.ini" />
+    <Content Include="Config\XComGame.ini" />
+    <Content Include="Localization\XComGame.int" />
+    <Content Include="Src\Shield\Classes\X2Ability_Shield.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Shield\Classes\X2DownloadableContentInfo_Shield.uc">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Src\Shield\Classes\X2Item_Shield.uc">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
+</Project>

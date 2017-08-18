@@ -33,7 +33,7 @@ static function X2AbilityTemplate AddShieldConventionalBonusAbility()
 	local X2AbilityTemplate                 Template;	
 	local X2Effect_PersistentStatChange		PersistentStatChangeEffect;
 
-	`CREATE_X2ABILITY_TEMPLATE(Template, 'Shield_MG_StatBonus');
+	`CREATE_X2ABILITY_TEMPLATE(Template, 'Shield_CV_StatBonus');
 
 	Template.IconImage = "img:///gfxXcomIcons.NanofiberVest"; //Does nothing, apparently
 
@@ -67,7 +67,7 @@ static function X2AbilityTemplate AddShieldMagneticBonusAbility()
 	local X2AbilityTemplate                 Template;	
 	local X2Effect_PersistentStatChange		PersistentStatChangeEffect;
 
-	`CREATE_X2ABILITY_TEMPLATE(Template, 'Shield_CV_StatBonus');
+	`CREATE_X2ABILITY_TEMPLATE(Template, 'Shield_MG_StatBonus');
 
 	Template.IconImage = "img:///gfxXcomIcons.NanofiberVest"; //Does nothing, apparently
 

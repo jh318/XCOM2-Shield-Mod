@@ -41,6 +41,8 @@ static function X2DataTemplate CreateTemplate_Shield_CV()
 	Template.Abilities.AddItem('Shield_CV_StatBonus');
 	Template.SetUIStatMarkup(class 'XLocalizedData'.default.ArmorLabel, eStat_ArmorMitigation, class 'X2Ability_Shield'.default.SHIELD_CONVENTIONAL_ARMORMITIGATION_BONUS);
 	Template.SetUIStatMarkup(class 'XLocalizedData'.default.DodgeLabel, eStat_Dodge, class 'X2Ability_Shield'.default.SHIELD_CONVENTIONAL_DODGE_BONUS);
+	Template.SetUIStatMarkup(class 'XLocalizedData'.default.HealthLabel, eStat_HP, class 'X2Ability_Shield'.default.SHIELD_CONVENTIONAL_HP_BONUS);
+	Template.SetUIStatMarkup(class 'XLocalizedData'.default.DefenseLabel, eStat_Defense, class 'X2Ability_Shield'.default.SHIELD_CONVENTIONAL_DEFENSE_BONUS);
 
 	Template.InventorySlot = eInvSlot_PrimaryWeapon;
 	Template.BaseDamage = default.SHIELD_BASEDAMAGE;
@@ -96,6 +98,8 @@ static function X2DataTemplate CreateTemplate_Shield_MG()
 	Template.Abilities.AddItem('Shield_MG_StatBonus');
 	Template.SetUIStatMarkup(class 'XLocalizedData'.default.ArmorLabel, eStat_ArmorMitigation, class 'X2Ability_Shield'.default.SHIELD_MAGNETIC_ARMORMITIGATION_BONUS);
 	Template.SetUIStatMarkup(class 'XLocalizedData'.default.DodgeLabel, eStat_Dodge, class 'X2Ability_Shield'.default.SHIELD_MAGNETIC_DODGE_BONUS);
+	Template.SetUIStatMarkup(class 'XLocalizedData'.default.HealthLabel, eStat_HP, class 'X2Ability_Shield'.default.SHIELD_MAGNETIC_HP_BONUS);
+	Template.SetUIStatMarkup(class 'XLocalizedData'.default.DefenseLabel, eStat_Defense, class 'X2Ability_Shield'.default.SHIELD_MAGNETIC_DEFENSE_BONUS);
 
 	Template.InventorySlot = eInvSlot_PrimaryWeapon;
 	Template.BaseDamage = default.SHIELD_BASEDAMAGE;
@@ -151,6 +155,9 @@ static function X2DataTemplate CreateTemplate_Shield_BM()
 	Template.Abilities.AddItem('Shield_BM_StatBonus');
 	Template.SetUIStatMarkup(class 'XLocalizedData'.default.ArmorLabel, eStat_ArmorMitigation, class 'X2Ability_Shield'.default.SHIELD_BEAM_ARMORMITIGATION_BONUS);
 	Template.SetUIStatMarkup(class 'XLocalizedData'.default.DodgeLabel, eStat_Dodge, class 'X2Ability_Shield'.default.SHIELD_BEAM_DODGE_BONUS);
+	Template.SetUIStatMarkup(class 'XLocalizedData'.default.HealthLabel, eStat_HP, class 'X2Ability_Shield'.default.SHIELD_BEAM_HP_BONUS);
+	Template.SetUIStatMarkup(class 'XLocalizedData'.default.DefenseLabel, eStat_Defense, class 'X2Ability_Shield'.default.SHIELD_BEAM_DEFENSE_BONUS);
+
 
 	Template.InventorySlot = eInvSlot_PrimaryWeapon;
 	Template.BaseDamage = default.SHIELD_BASEDAMAGE;

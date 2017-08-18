@@ -9,6 +9,13 @@ var config int SHIELD_CONVENTIONAL_ARMORMITIGATION_BONUS;
 var config int SHIELD_MAGNETIC_ARMORMITIGATION_BONUS;
 var config int SHIELD_BEAM_ARMORMITIGATION_BONUS;
 
+var config int SHIELD_CONVENTIONAL_HP_BONUS;
+var config int SHIELD_MAGNETIC_HP_BONUS;
+var config int SHIELD_BEAM_HP_BONUS;
+
+var config int SHIELD_CONVENTIONAL_DEFENSE_BONUS;
+var config int SHIELD_MAGNETIC_DEFENSE_BONUS;
+var config int SHIELD_BEAM_DEFENSE_BONUS;
 
 static function array<X2DataTemplate> CreateTemplates()
 {
@@ -44,6 +51,9 @@ static function X2AbilityTemplate AddShieldConventionalBonusAbility()
 	PersistentStatChangeEffect.SetDisplayInfo(ePerkBuff_Passive, "", "", Template.IconImage, false,,Template.AbilitySourceName);
 	PersistentStatchangeEffect.AddPersistentStatChange(eStat_Dodge, default.SHIELD_CONVENTIONAL_DODGE_BONUS);
 	PersistentStatchangeEffect.AddPersistentStatChange(eStat_ArmorMitigation, default.SHIELD_CONVENTIONAL_ARMORMITIGATION_BONUS);
+	PersistentStatchangeEffect.AddPersistentStatChange(eStat_HP, default.SHIELD_CONVENTIONAL_HP_BONUS);
+	PersistentStatchangeEffect.AddPersistentStatChange(eStat_Defense, default.SHIELD_CONVENTIONAL_DEFENSE_BONUS);
+
 
 	Template.AddTargetEffect(PersistentStatChangeEffect);
 
@@ -75,6 +85,8 @@ static function X2AbilityTemplate AddShieldMagneticBonusAbility()
 	PersistentStatChangeEffect.SetDisplayInfo(ePerkBuff_Passive, "", "", Template.IconImage, false,,Template.AbilitySourceName);
 	PersistentStatchangeEffect.AddPersistentStatChange(eStat_Dodge, default.SHIELD_MAGNETIC_DODGE_BONUS);
 	PersistentStatchangeEffect.AddPersistentStatChange(eStat_ArmorMitigation, default.SHIELD_MAGNETIC_ARMORMITIGATION_BONUS);
+	PersistentStatchangeEffect.AddPersistentStatChange(eStat_HP, default.SHIELD_MAGNETIC_HP_BONUS);
+	PersistentStatchangeEffect.AddPersistentStatChange(eStat_Defense, default.SHIELD_MAGNETIC_DEFENSE_BONUS);
 
 	Template.AddTargetEffect(PersistentStatChangeEffect);
 
@@ -106,6 +118,8 @@ static function X2AbilityTemplate AddShieldBeamBonusAbility()
 	PersistentStatChangeEffect.SetDisplayInfo(ePerkBuff_Passive, "", "", Template.IconImage, false,,Template.AbilitySourceName);
 	PersistentStatchangeEffect.AddPersistentStatChange(eStat_Dodge, default.SHIELD_BEAM_DODGE_BONUS);
 	PersistentStatchangeEffect.AddPersistentStatChange(eStat_ArmorMitigation, default.SHIELD_BEAM_ARMORMITIGATION_BONUS);
+	PersistentStatchangeEffect.AddPersistentStatChange(eStat_HP, default.SHIELD_BEAM_HP_BONUS);
+	PersistentStatchangeEffect.AddPersistentStatChange(eStat_Defense, default.SHIELD_BEAM_DEFENSE_BONUS);
 
 	Template.AddTargetEffect(PersistentStatChangeEffect);
 

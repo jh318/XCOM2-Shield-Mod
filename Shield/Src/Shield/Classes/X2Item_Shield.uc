@@ -30,13 +30,12 @@ static function X2DataTemplate CreateTemplate_Shield_CV()
 	local X2WeaponTemplate Template;
 	`Create_X2Template(class 'X2WeaponTemplate', Template, 'Shield_CV');
 
-	Template.WeaponPanelImage = "_ConventionalRifle";
 	Template.EquipSound = "Conventional_Weapon_Equip";
 
 	Template.Itemcat = 'weapon';
 	Template.WeaponCat = 'shield';
 	Template.WeaponTech = 'conventional';
-	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Hammer_Armor";
+	Template.strImage = "img:///UILibrary_Common.AlienWeapons.GatekeeperEyeball";
 	Template.Tier = 0;
 
 	Template.Abilities.AddItem('Shield_CV_StatBonus');
@@ -63,20 +62,11 @@ static function X2DataTemplate CreateTemplate_Shield_CV()
 	Template.GameArchetype = "ConvShield.WP_Shield_CV"; //Unreal Asset
 
 	Template.UIArmoryCameraPointTag = 'UIPawnLocation_WeaponUpgrade_AssaultRifle';
-	Template.AddDefaultAttachment('Mag', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_MagA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_MagA");
-	Template.AddDefaultAttachment('Optic', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_OpticA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_OpticA");
-	Template.AddDefaultAttachment('Reargrip', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_ReargripA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_ReargripA");
-	Template.AddDefaultAttachment('Stock', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_StockA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_StockA");
-	Template.AddDefaultAttachment('Trigger', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_TriggerA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_TriggerA");
-	Template.AddDefaultAttachment('Light', "ConvAttachments.Meshes.SM_ConvFlashLight", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_LightA");
-
 	
 	Template.iPhysicsImpulse = 25;
 	Template.fKnockbackDamageAmount = 50.0f;
 	Template.fKnockbackDamageRadius = 80.0f;
 	Template.DamageTypeTemplateName = 'Projectile_Conventional';
-
-	//Template.UpgradeItem = 'Shield_MG';
 
 	Template.StartingItem = true;
 	Template.bInfiniteItem = true;
@@ -93,8 +83,8 @@ static function X2DataTemplate CreateTemplate_Shield_MG()
 	Template.Itemcat = 'weapon';
 	Template.WeaponCat = 'shield';
 	Template.WeaponTech = 'magnetic';
-	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Hammer_Armor";
-	Template.WeaponPanelImage = "_MagneticRifle";
+	Template.strImage = "img:///UILibrary_Common.AlienWeapons.GatekeeperEyeball";
+	
 	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.Tier = 2;
 
@@ -122,13 +112,6 @@ static function X2DataTemplate CreateTemplate_Shield_MG()
 	Template.GameArchetype = "ConvShield.WP_Shield_CV"; //Unreal Asset
 
 	Template.UIArmoryCameraPointTag = 'UIPawnLocation_WeaponUpgrade_AssaultRifle';
-	Template.AddDefaultAttachment('Mag', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_MagA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_MagA");
-	Template.AddDefaultAttachment('Optic', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_OpticA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_OpticA");
-	Template.AddDefaultAttachment('Reargrip', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_ReargripA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_ReargripA");
-	Template.AddDefaultAttachment('Stock', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_StockA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_StockA");
-	Template.AddDefaultAttachment('Trigger', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_TriggerA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_TriggerA");
-	Template.AddDefaultAttachment('Light', "ConvAttachments.Meshes.SM_ConvFlashLight", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_LightA");
-
 	
 	Template.iPhysicsImpulse = 25;
 	Template.fKnockbackDamageAmount = 50.0f;
@@ -150,13 +133,12 @@ static function X2DataTemplate CreateTemplate_Shield_BM()
 	local X2WeaponTemplate Template;
 	`Create_X2Template(class 'X2WeaponTemplate', Template, 'Shield_BM');
 
-	Template.WeaponPanelImage = "_BeamRifle";
 	Template.EquipSound = "Beam_Weapon_Equip";
 
 	Template.Itemcat = 'weapon';
 	Template.WeaponCat = 'shield';
 	Template.WeaponTech = 'beam';
-	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Warden_Armor";
+	Template.strImage = "img:///UILibrary_Common.AlienWeapons.GatekeeperEyeball";
 	Template.Tier = 4;
 
 	Template.Abilities.AddItem('Shield_BM_StatBonus');
@@ -184,13 +166,6 @@ static function X2DataTemplate CreateTemplate_Shield_BM()
 	Template.GameArchetype = "ConvShield.WP_Shield_CV"; //Unreal Asset
 
 	Template.UIArmoryCameraPointTag = 'UIPawnLocation_WeaponUpgrade_AssaultRifle';
-	Template.AddDefaultAttachment('Mag', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_MagA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_MagA");
-	Template.AddDefaultAttachment('Optic', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_OpticA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_OpticA");
-	Template.AddDefaultAttachment('Reargrip', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_ReargripA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_ReargripA");
-	Template.AddDefaultAttachment('Stock', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_StockA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_StockA");
-	Template.AddDefaultAttachment('Trigger', "ConvAssaultRifle.Meshes.SM_ConvAssaultRifle_TriggerA", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_TriggerA");
-	Template.AddDefaultAttachment('Light', "ConvAttachments.Meshes.SM_ConvFlashLight", , "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_LightA");
-
 	
 	Template.iPhysicsImpulse = 25;
 	Template.fKnockbackDamageAmount = 50.0f;

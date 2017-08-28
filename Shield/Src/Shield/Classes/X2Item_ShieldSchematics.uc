@@ -27,7 +27,7 @@ static function X2DataTemplate CreateTemplate_Shield_Magnetic_Schematic()
 	`CREATE_X2TEMPLATE(class'X2SchematicTemplate', Template, 'Shield_MG_Schematic');
 	
 	Template.ItemCat = 'weapon';
-	Template.strImage = "img:///UILibrary_Common.AlienWeapons.GatekeeperEyeball";
+	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Hammer_Armor";
 	Template.CanBeBuilt = true;
 	Template.bOneTimeBuild = true;
 	Template.HideInInventory = true;
@@ -41,7 +41,7 @@ static function X2DataTemplate CreateTemplate_Shield_Magnetic_Schematic()
 
 	// Requirements
 	Template.Requirements.RequiredTechs.AddItem('MagnetizedWeapons');
-	Template.Requirements.RequiredEngineeringScore = 0;
+	Template.Requirements.RequiredEngineeringScore = 10;
 	Template.Requirements.bVisibleIfPersonnelGatesNotMet = true;
 
 	//Cost
@@ -73,7 +73,7 @@ static function X2DataTemplate CreateTemplate_Shield_Beam_Schematic()
 	`CREATE_X2TEMPLATE(class'X2SchematicTemplate', Template, 'Shield_BM_Schematic');
 
 	Template.ItemCat = 'weapon';
-	Template.strImage = "img:///UILibrary_Common.AlienWeapons.GatekeeperEyeball";
+	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Warden_Armor";
 	Template.CanBeBuilt = true;
 	Template.bOneTimeBuild = true;
 	Template.HideInInventory = true;
@@ -86,7 +86,7 @@ static function X2DataTemplate CreateTemplate_Shield_Beam_Schematic()
 
 	//Requirements
 	Template.Requirements.RequiredTechs.AddItem('PlasmaRifle');
-	Template.Requirements.RequiredEngineeringScore = 0;
+	Template.Requirements.RequiredEngineeringScore = 20;
 	Template.Requirements.bVisibleIfPersonnelGatesNotMet = true;
 
 	//Cost

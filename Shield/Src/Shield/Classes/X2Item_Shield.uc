@@ -17,19 +17,10 @@ var config int SHIELD_IUPGRADESLOTS;
 static function array<X2DataTemplate> CreateTemplates()
 {
 	local array<X2DataTemplate> Weapons;
-	//local X2ItemTemplateManager ItemTemplateManager;
 
 	Weapons.AddItem(CreateTemplate_Shield_CV());
 	Weapons.AddItem(CreateTemplate_Shield_MG());
 	Weapons.AddItem(CreateTemplate_Shield_BM());
-
-	//ItemTemplateManager = class'X2ItemTemplateManager'.static.GetItemTemplateManager();
-
-	//if(ItemTemplateManager == none)
-	//{
-	//	`Redscreen("Shield : failed to retrieve ItemTemplateManager to configure upgrades");
-	//	return Weapons;
-	//}
 
 	return Weapons;
 }

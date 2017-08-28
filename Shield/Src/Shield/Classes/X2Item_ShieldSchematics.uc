@@ -25,7 +25,7 @@ static function X2DataTemplate CreateTemplate_Shield_Magnetic_Schematic()
 	local ArtifactCost Resources, Artifacts;
 
 	`CREATE_X2TEMPLATE(class'X2SchematicTemplate', Template, 'Shield_MG_Schematic');
-
+	
 	Template.ItemCat = 'weapon';
 	Template.strImage = "img:///UILibrary_Common.MagAssaultRifle.MagAssault_Base";
 	Template.CanBeBuilt = true;
@@ -35,6 +35,9 @@ static function X2DataTemplate CreateTemplate_Shield_Magnetic_Schematic()
 	Template.Tier = 1;
 	Template.OnBuiltFn = class'X2Item_DefaultSchematics'.static.UpgradeItems;
 
+	//Items to upgrade
+	//Template.ItemsToUpgrade.AddItems('Shield_CV');
+	
 	Template.ReferenceItemTemplate = 'Shield_MG';
 	Template.HideIfPurchased = 'Shield_BM';
 
@@ -77,6 +80,10 @@ static function X2DataTemplate CreateTemplate_Shield_Beam_Schematic()
 	Template.PointsToComplete = 0;
 	Template.Tier = 3;
 	Template.OnBuiltFn = class'X2Item_DefaultSchematics'.static.UpgradeItems;
+
+	//Items to upgrade
+	//Template.ItemsToUpgrade.AddItem('Shield_CV');
+	//Template.ItemsToUpgrade.AddItem('Shield_MG');
 
 	Template.ReferenceItemTemplate = 'Shield_BM';
 

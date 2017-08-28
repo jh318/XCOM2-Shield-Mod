@@ -96,13 +96,12 @@ static function X2DataTemplate CreateTemplate_Shield_MG()
 	local X2WeaponTemplate Template;
 	`Create_X2Template(class 'X2WeaponTemplate', Template, 'Shield_MG');
 
-	Template.WeaponPanelImage = "_MagneticRifle";
-	Template.EquipSound = "Magnetic_Weapon_Equip";
-
 	Template.Itemcat = 'weapon';
 	Template.WeaponCat = 'shield';
 	Template.WeaponTech = 'magnetic';
 	Template.strImage = "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_Base";
+	Template.WeaponPanelImage = "_MagneticRifle";
+	Template.EquipSound = "Magnetic_Weapon_Equip";
 	Template.Tier = 2;
 
 	Template.Abilities.AddItem('Shield_MG_StatBonus');
@@ -142,10 +141,10 @@ static function X2DataTemplate CreateTemplate_Shield_MG()
 	Template.fKnockbackDamageRadius = 80.0f;
 	Template.DamageTypeTemplateName = 'Projectile_Conventional';
 
-	Template.StartingItem = false;
 	Template.CreatorTemplateName = 'Shield_MG_Schematic';
 	Template.BaseItem = 'Shield_CV';
 
+	//Template.StartingItem = false;
 	Template.CanBeBuilt = false;
 	Template.bInfiniteItem = true;
 
@@ -208,10 +207,9 @@ static function X2DataTemplate CreateTemplate_Shield_BM()
 	Template.CreatorTemplateName = 'Shield_BM_Schematic';
 	Template.BaseItem = 'Shield_MG';
 	
-	Template.StartingItem = false;
+	//Template.StartingItem = false;
 	Template.CanBeBuilt = false;
 	Template.bInfiniteItem = true;
-
 
 	return Template;
 }

@@ -17,9 +17,13 @@ var config int SHIELD_IUPGRADESLOTS;
 static function array<X2DataTemplate> CreateTemplates()
 {
 	local array<X2DataTemplate> MyWeapons;
+	local X2ItemTemplateManager ItemTemplateManager;
+
 	MyWeapons.AddItem(CreateTemplate_Shield_CV());
 	MyWeapons.AddItem(CreateTemplate_Shield_MG());
 	MyWeapons.AddItem(CreateTemplate_Shield_BM());
+
+	ItemTemplateManager = class'X2ItemTemplateManager'.static.GetItemTemplateManager();
 
 	return MyWeapons;
 }
@@ -35,7 +39,8 @@ static function X2DataTemplate CreateTemplate_Shield_CV()
 	Template.Itemcat = 'weapon';
 	Template.WeaponCat = 'shield';
 	Template.WeaponTech = 'conventional';
-	Template.strImage = "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_Base";
+	//Template.strImage = "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_Base";
+	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Power_Armor";
 	Template.Tier = 0;
 
 	Template.Abilities.AddItem('Shield_CV_StatBonus');
@@ -73,10 +78,12 @@ static function X2DataTemplate CreateTemplate_Shield_CV()
 	Template.iPhysicsImpulse = 25;
 	Template.fKnockbackDamageAmount = 50.0f;
 	Template.fKnockbackDamageRadius = 80.0f;
+	Template.DamageTypeTemplateName = 'Projectile_Conventional';
+
+
 	Template.StartingItem = true;
 	Template.bInfiniteItem = true;
 	Template.CanBeBuilt = false;
-	Template.DamageTypeTemplateName = 'Projectile_Conventional';
 
 	return Template;
 }
@@ -92,7 +99,7 @@ static function X2DataTemplate CreateTemplate_Shield_MG()
 	Template.Itemcat = 'weapon';
 	Template.WeaponCat = 'shield';
 	Template.WeaponTech = 'magnetic';
-	Template.strImage = "img:///UILibrary_Common.MagAssaultRifle.MagAssault_Base";
+	Template.strImage = "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_Base";
 	Template.Tier = 2;
 
 	Template.Abilities.AddItem('Shield_MG_StatBonus');
@@ -130,10 +137,14 @@ static function X2DataTemplate CreateTemplate_Shield_MG()
 	Template.iPhysicsImpulse = 25;
 	Template.fKnockbackDamageAmount = 50.0f;
 	Template.fKnockbackDamageRadius = 80.0f;
-	Template.StartingItem = true;
-	Template.bInfiniteItem = true;
-	Template.CanBeBuilt = false;
 	Template.DamageTypeTemplateName = 'Projectile_Conventional';
+
+	Template.StartingItem = false;
+	Template.CreatorTemplateName = 'Shield_MG_Schematic';
+	Template.BaseItem = 'Shield_CV';
+
+	Template.CanBeBuilt = false;
+	Template.bInfiniteItem = true;
 
 	return Template;
 }
@@ -149,7 +160,8 @@ static function X2DataTemplate CreateTemplate_Shield_BM()
 	Template.Itemcat = 'weapon';
 	Template.WeaponCat = 'shield';
 	Template.WeaponTech = 'beam';
-	Template.strImage = "img:///UILibrary_Common.BeamAssaultRifle.BeamAssault_Base";
+	//Template.strImage = "img:///UILibrary_Common.BeamAssaultRifle.BeamAssault_Base";
+	Template.strImage = "img:///UILibrary_Common.ConvAssaultRifle.ConvAssault_Base";
 	Template.Tier = 4;
 
 	Template.Abilities.AddItem('Shield_BM_StatBonus');
@@ -188,10 +200,15 @@ static function X2DataTemplate CreateTemplate_Shield_BM()
 	Template.iPhysicsImpulse = 25;
 	Template.fKnockbackDamageAmount = 50.0f;
 	Template.fKnockbackDamageRadius = 80.0f;
-	Template.StartingItem = true;
-	Template.bInfiniteItem = true;
-	Template.CanBeBuilt = false;
 	Template.DamageTypeTemplateName = 'Projectile_Conventional';
+
+	Template.CreatorTemplateName = 'Shield_BM_Schematic';
+	Template.BaseItem = 'Shield_MG';
+	
+	Template.StartingItem = false;
+	Template.CanBeBuilt = false;
+	Template.bInfiniteItem = true;
+
 
 	return Template;
 }

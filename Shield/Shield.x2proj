@@ -41,6 +41,9 @@
     <Content Include="Src\Shield\Classes\X2Item_Shield.uc">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Src\Shield\Classes\X2Item_ShieldSchematics.uc">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildLocalExtensionPath)\XCOM2.targets" />
 </Project>

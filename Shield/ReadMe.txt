@@ -1,1 +1,1 @@
-﻿You created an XCOM 2 Mod Project!
+﻿You can use the XcomShield.ini file to edit shield buff attributes.

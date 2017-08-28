@@ -25,7 +25,10 @@ static function array<X2DataTemplate> CreateTemplates()
 
 	ItemTemplateManager = class'X2ItemTemplateManager'.static.GetItemTemplateManager();
 
-	return MyWeapons;
+	if(ItemTemplateManager == none)
+	{
+		return MyWeapons;
+	}
 }
 
 static function X2DataTemplate CreateTemplate_Shield_CV()

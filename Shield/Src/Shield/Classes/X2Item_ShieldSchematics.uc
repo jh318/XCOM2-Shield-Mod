@@ -27,24 +27,29 @@ static function X2DataTemplate CreateTemplate_Shield_Magnetic_Schematic()
 	`CREATE_X2TEMPLATE(class'X2SchematicTemplate', Template, 'Shield_MG_Schematic');
 	
 	Template.ItemCat = 'weapon';
-	Template.strImage = "img:///UILibrary_Common.MagAssaultRifle.MagAssault_Base";
+	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Hammer_Armor";
 	Template.CanBeBuilt = true;
 	Template.bOneTimeBuild = true;
 	Template.HideInInventory = true;
 	Template.PointsToComplete = 0;
-	Template.Tier = 1;
+	Template.Tier = 0;
 	Template.OnBuiltFn = class'X2Item_DefaultSchematics'.static.UpgradeItems;
 
-	//Items to upgrade
-	//Template.ItemsToUpgrade.AddItems('Shield_CV');
+	// Items to upgrade
+	//Template.ItemsToUpgrade.AddItem('Shield_CV');
+	//Template.ReferenceItemTemplate = 'Shield_MG';
+	//Template.HideIfPurchased = 'Shield_BM';
 	
+	// Items being created
 	Template.ReferenceItemTemplate = 'Shield_MG';
 	Template.HideIfPurchased = 'Shield_BM';
 
+	// Requirements
 	Template.Requirements.RequiredTechs.AddItem('MagnetizedWeapons');
-	Template.Requirements.RequiredEngineeringScore = 10;
+	Template.Requirements.RequiredEngineeringScore = 0;
 	Template.Requirements.bVisibleIfPersonnelGatesNotMet = true;
 
+	//Cost
 	Resources.ItemTemplateName = 'Supplies';
 	Resources.Quantity = default.SHIELD_MAGNETIC_SCHEMATIC_SUPPLYCOST;
 	Template.Cost.ResourceCosts.AddItem(Resources);
@@ -73,24 +78,27 @@ static function X2DataTemplate CreateTemplate_Shield_Beam_Schematic()
 	`CREATE_X2TEMPLATE(class'X2SchematicTemplate', Template, 'Shield_BM_Schematic');
 
 	Template.ItemCat = 'weapon';
-	Template.strImage = "img:///UILibrary_Common.MagAssaultRifle.MagAssault_Base";
+	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Warden_Armor";
 	Template.CanBeBuilt = true;
 	Template.bOneTimeBuild = true;
 	Template.HideInInventory = true;
 	Template.PointsToComplete = 0;
-	Template.Tier = 3;
+	Template.Tier = 0;
 	Template.OnBuiltFn = class'X2Item_DefaultSchematics'.static.UpgradeItems;
 
 	//Items to upgrade
 	//Template.ItemsToUpgrade.AddItem('Shield_CV');
 	//Template.ItemsToUpgrade.AddItem('Shield_MG');
 
-	Template.ReferenceItemTemplate = 'Shield_BM';
+	//Items being created
+	Template.ReferenceItemTemplate = 'Shield_MG';
 
+	//Requirements
 	Template.Requirements.RequiredTechs.AddItem('PlasmaRifle');
-	Template.Requirements.RequiredEngineeringScore = 20;
+	Template.Requirements.RequiredEngineeringScore = 0;
 	Template.Requirements.bVisibleIfPersonnelGatesNotMet = true;
 
+	//Cost
 	Resources.ItemTemplateName = 'Supplies';
 	Resources.Quantity = default.SHIELD_BEAM_SCHEMATIC_SUPPLYCOST;
 	Template.Cost.ResourceCosts.AddItem(Resources);

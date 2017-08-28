@@ -27,18 +27,13 @@ static function X2DataTemplate CreateTemplate_Shield_Magnetic_Schematic()
 	`CREATE_X2TEMPLATE(class'X2SchematicTemplate', Template, 'Shield_MG_Schematic');
 	
 	Template.ItemCat = 'weapon';
-	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Hammer_Armor";
+	Template.strImage = "img:///UILibrary_Common.AlienWeapons.GatekeeperEyeball";
 	Template.CanBeBuilt = true;
 	Template.bOneTimeBuild = true;
 	Template.HideInInventory = true;
 	Template.PointsToComplete = 0;
 	Template.Tier = 0;
 	Template.OnBuiltFn = class'X2Item_DefaultSchematics'.static.UpgradeItems;
-
-	// Items to upgrade
-	//Template.ItemsToUpgrade.AddItem('Shield_CV');
-	//Template.ReferenceItemTemplate = 'Shield_MG';
-	//Template.HideIfPurchased = 'Shield_BM';
 	
 	// Items being created
 	Template.ReferenceItemTemplate = 'Shield_MG';
@@ -78,7 +73,7 @@ static function X2DataTemplate CreateTemplate_Shield_Beam_Schematic()
 	`CREATE_X2TEMPLATE(class'X2SchematicTemplate', Template, 'Shield_BM_Schematic');
 
 	Template.ItemCat = 'weapon';
-	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Warden_Armor";
+	Template.strImage = "img:///UILibrary_Common.AlienWeapons.GatekeeperEyeball";
 	Template.CanBeBuilt = true;
 	Template.bOneTimeBuild = true;
 	Template.HideInInventory = true;
@@ -86,12 +81,8 @@ static function X2DataTemplate CreateTemplate_Shield_Beam_Schematic()
 	Template.Tier = 0;
 	Template.OnBuiltFn = class'X2Item_DefaultSchematics'.static.UpgradeItems;
 
-	//Items to upgrade
-	//Template.ItemsToUpgrade.AddItem('Shield_CV');
-	//Template.ItemsToUpgrade.AddItem('Shield_MG');
-
 	//Items being created
-	Template.ReferenceItemTemplate = 'Shield_MG';
+	Template.ReferenceItemTemplate = 'Shield_BM';
 
 	//Requirements
 	Template.Requirements.RequiredTechs.AddItem('PlasmaRifle');

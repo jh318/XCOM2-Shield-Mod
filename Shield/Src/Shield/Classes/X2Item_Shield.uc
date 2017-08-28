@@ -17,19 +17,19 @@ var config int SHIELD_IUPGRADESLOTS;
 static function array<X2DataTemplate> CreateTemplates()
 {
 	local array<X2DataTemplate> Weapons;
-	local X2ItemTemplateManager ItemTemplateManager;
+	//local X2ItemTemplateManager ItemTemplateManager;
 
 	Weapons.AddItem(CreateTemplate_Shield_CV());
 	Weapons.AddItem(CreateTemplate_Shield_MG());
 	Weapons.AddItem(CreateTemplate_Shield_BM());
 
-	ItemTemplateManager = class'X2ItemTemplateManager'.static.GetItemTemplateManager();
+	//ItemTemplateManager = class'X2ItemTemplateManager'.static.GetItemTemplateManager();
 
-	if(ItemTemplateManager == none)
-	{
-		`Redscreen("Shield : failed to retrieve ItemTemplateManager to configure upgrades");
-		return Weapons;
-	}
+	//if(ItemTemplateManager == none)
+	//{
+	//	`Redscreen("Shield : failed to retrieve ItemTemplateManager to configure upgrades");
+	//	return Weapons;
+	//}
 
 	return Weapons;
 }
@@ -45,7 +45,7 @@ static function X2DataTemplate CreateTemplate_Shield_CV()
 	Template.Itemcat = 'weapon';
 	Template.WeaponCat = 'shield';
 	Template.WeaponTech = 'conventional';
-	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Kevlar_Armor";
+	Template.strImage = "img:///UILibrary_Common.AlienWeapons.GatekeeperEyeball";
 	Template.Tier = 0;
 
 	Template.Abilities.AddItem('Shield_CV_StatBonus');
@@ -105,7 +105,7 @@ static function X2DataTemplate CreateTemplate_Shield_MG()
 	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Hammer_Armor";
 	Template.WeaponPanelImage = "_MagneticRifle";
 	Template.EquipSound = "Magnetic_Weapon_Equip";
-	Template.Tier = 2;
+	Template.Tier = 0;
 
 	Template.Abilities.AddItem('Shield_MG_StatBonus');
 	Template.SetUIStatMarkup(class 'XLocalizedData'.default.ArmorLabel, eStat_ArmorMitigation, class 'X2Ability_Shield'.default.SHIELD_MAGNETIC_ARMORMITIGATION_BONUS);
@@ -144,7 +144,7 @@ static function X2DataTemplate CreateTemplate_Shield_MG()
 	Template.fKnockbackDamageRadius = 80.0f;
 	Template.DamageTypeTemplateName = 'Projectile_Conventional';
 
-	Template.CreatorTemplateName = 'Shield_Magnetic_Schematic';
+	Template.CreatorTemplateName = 'Shield_MG_Schematic';
 	Template.BaseItem = 'Shield_CV';
 
 	//Template.StartingItem = false;
@@ -166,7 +166,7 @@ static function X2DataTemplate CreateTemplate_Shield_BM()
 	Template.WeaponCat = 'shield';
 	Template.WeaponTech = 'beam';
 	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Warden_Armor";
-	Template.Tier = 4;
+	Template.Tier = 0;
 
 	Template.Abilities.AddItem('Shield_BM_StatBonus');
 	Template.SetUIStatMarkup(class 'XLocalizedData'.default.ArmorLabel, eStat_ArmorMitigation, class 'X2Ability_Shield'.default.SHIELD_BEAM_ARMORMITIGATION_BONUS);
@@ -206,7 +206,7 @@ static function X2DataTemplate CreateTemplate_Shield_BM()
 	Template.fKnockbackDamageRadius = 80.0f;
 	Template.DamageTypeTemplateName = 'Projectile_Conventional';
 
-	Template.CreatorTemplateName = 'Shield_Beam_Schematic';
+	Template.CreatorTemplateName = 'Shield_BM_Schematic';
 	Template.BaseItem = 'Shield_MG';
 	
 	//Template.StartingItem = false;

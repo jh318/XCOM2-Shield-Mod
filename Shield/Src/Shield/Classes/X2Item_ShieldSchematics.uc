@@ -32,7 +32,7 @@ static function X2DataTemplate CreateTemplate_Shield_Magnetic_Schematic()
 	Template.bOneTimeBuild = true;
 	Template.HideInInventory = true;
 	Template.PointsToComplete = 0;
-	Template.Tier = 0;
+	Template.Tier = 1;
 	Template.OnBuiltFn = class'X2Item_DefaultSchematics'.static.UpgradeItems;
 	
 	// Items being created
@@ -78,7 +78,7 @@ static function X2DataTemplate CreateTemplate_Shield_Beam_Schematic()
 	Template.bOneTimeBuild = true;
 	Template.HideInInventory = true;
 	Template.PointsToComplete = 0;
-	Template.Tier = 0;
+	Template.Tier = 3;
 	Template.OnBuiltFn = class'X2Item_DefaultSchematics'.static.UpgradeItems;
 
 	//Items being created

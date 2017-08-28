@@ -36,7 +36,7 @@ static function X2DataTemplate CreateTemplate_Shield_CV()
 	Template.Itemcat = 'weapon';
 	Template.WeaponCat = 'shield';
 	Template.WeaponTech = 'conventional';
-	Template.strImage = "img:///UILibrary_Common.AlienWeapons.GatekeeperEyeball";
+	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Hammer_Armor";
 	Template.Tier = 0;
 
 	Template.Abilities.AddItem('Shield_CV_StatBonus');
@@ -96,7 +96,7 @@ static function X2DataTemplate CreateTemplate_Shield_MG()
 	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Hammer_Armor";
 	Template.WeaponPanelImage = "_MagneticRifle";
 	Template.EquipSound = "Magnetic_Weapon_Equip";
-	Template.Tier = 0;
+	Template.Tier = 2;
 
 	Template.Abilities.AddItem('Shield_MG_StatBonus');
 	Template.SetUIStatMarkup(class 'XLocalizedData'.default.ArmorLabel, eStat_ArmorMitigation, class 'X2Ability_Shield'.default.SHIELD_MAGNETIC_ARMORMITIGATION_BONUS);
@@ -157,7 +157,7 @@ static function X2DataTemplate CreateTemplate_Shield_BM()
 	Template.WeaponCat = 'shield';
 	Template.WeaponTech = 'beam';
 	Template.strImage = "img:///UILibrary_StrategyImages.X2InventoryIcons.Inv_Warden_Armor";
-	Template.Tier = 0;
+	Template.Tier = 4;
 
 	Template.Abilities.AddItem('Shield_BM_StatBonus');
 	Template.SetUIStatMarkup(class 'XLocalizedData'.default.ArmorLabel, eStat_ArmorMitigation, class 'X2Ability_Shield'.default.SHIELD_BEAM_ARMORMITIGATION_BONUS);

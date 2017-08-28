@@ -23,6 +23,9 @@
     <Content Include="Config\XComShield.ini">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="Config\XComStrategyTuning.ini">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="Content\ConvShield.upk">
       <SubType>Content</SubType>
     </Content>
